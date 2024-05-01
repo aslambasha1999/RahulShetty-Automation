@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Automation Testing]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" parallel="tests" name="Functional Testing(failed)" verbose="0">
+    <classes>
+      <class name="TestCases.AddToCart">
+        <methods>
+          <include name="addToCart"/>
+        </methods>
+      </class> <!-- TestCases.AddToCart -->
+    </classes>
+  </test> <!-- Functional Testing(failed) -->
+</suite> <!-- Failed suite [Automation Testing] -->
