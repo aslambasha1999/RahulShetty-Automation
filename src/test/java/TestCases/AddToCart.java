@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
@@ -30,6 +31,14 @@ public class AddToCart {
 
 		addToCart(driver, productArray);
 		applyCouponCode(driver,couponCode,wait);
+		driver.findElement(By.xpath("//button[normalize-space()='Place Order']")).click();
+		Select sel=new Select(driver.findElement(By.tagName("select")));
+		sel.selectByValue("India");
+		driver.findElement(By.xpath("//input[@type='checkbox']")).click();
+		driver.findElement(By.xpath("//button[normalize-space()='Proceed']")).click();
+		
+		System.out.println(driver.findElement(By.xpath("//span[contains(text(),'Thank you, your order has been placed successfully')]")).getText());
+		
 		
 
 		
