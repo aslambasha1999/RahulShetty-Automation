@@ -39,7 +39,7 @@ public class AddToCart {
 		
 		System.out.println(driver.findElement(By.xpath("//span[contains(text(),'Thank you, your order has been placed successfully')]")).getText());
 		
-		
+		driver.close();
 
 		
 
